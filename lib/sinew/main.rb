@@ -9,7 +9,7 @@ module Sinew
   class Main
     CODER = HTMLEntities.new
 
-    attr_accessor :url, :uri, :raw
+    attr_accessor :url, :uri, :raw, :file_path
 
     def initialize(options)
       @options = options.dup
@@ -161,6 +161,7 @@ module Sinew
 
       # setup local variables
       @url, @uri = _curler.url, _curler.uri
+      @file_path = path
       @html = nil
       @clean = nil
       @noko = nil
