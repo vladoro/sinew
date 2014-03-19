@@ -56,7 +56,8 @@ module Sinew
     end
 
     def noko
-      @noko ||= Nokogiri::HTML(html)
+      ########### For HTML5
+      @noko ||= Nokogiri::HTML( @raw)
     end
 
     #
